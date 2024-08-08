@@ -4,9 +4,9 @@
 - docker 설치 필수
   - ubuntu 24 버전에서 도커 설치되었습니다.
     - [Move to Docs](https://docs.docker.com/engine/install/ubuntu/)
-- docker network를 추가해야합니다. -> uponati-network
+- docker network를 추가해야합니다. -> default-network
   - command
-    - docker network create uponati-network
+    - docker network create default-network
 - 성공적인 SSL 인증을 위해, Nginx와 Certbot을 통한 인증서 발급 시 conf 파일에 지정된 백엔드 애플리케이션 컨테이너가 반드시 실행 중이어야 함
 
 # 유의 사항
@@ -25,7 +25,7 @@ chmod +x init.sh init-letsencrypt.sh
 
 1. 도메인 정보(A 레코드 입력)
 2. SSL에 관련된 안내 메일을 받을 이메일
-3. 애플리케이션 이름(적절한 이름으로 지정, **[Ex. oddnary]** )
+3. 애플리케이션 이름(적절한 이름으로 지정, **[Ex. your-app-name]** )
 4. 애플리케이션 컨테이너를 띄운 PORTs (Ex. 3000 or 3000, 3001, 3002)
 
 <details>
